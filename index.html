@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="theme-selector">
+        <label for="theme">Theme: </label>
+        <select id="theme" onchange="changeTheme(this.value)">
+            <option value="default">Default</option>
+            <option value="dark">Dark Mode</option>
+            <option value="pastel1">Pastel Peach</option>
+            <option value="pastel2">Pastel Mint</option>
+            <option value="pastel3">Pastel Lavender</option>
+        </select>
+    </div>
+    <div class="snowflakes" aria-hidden="true"></div>
+    <div class="Calculator">
+        <div class="display" id="display"></div>
+        <button class="button" onclick="clearDisplay()">C</button>
+        <button class="button" onclick="inputValue('/')">/</button>
+        <button class="button" onclick="inputValue('*')">*</button>
+        <button class="button" onclick="deleteLast()">DEL</button>
+        <button class="button" onclick="inputValue('7')">7</button>
+        <button class="button" onclick="inputValue('8')">8</button>
+        <button class="button" onclick="inputValue('9')">9</button>
+        <button class="button" onclick="inputValue('-')">-</button>
+        <button class="button" onclick="inputValue('4')">4</button>
+        <button class="button" onclick="inputValue('5')">5</button>
+        <button class="button" onclick="inputValue('6')">6</button>
+        <button class="button" onclick="inputValue('+')">+</button>
+        <button class="button" onclick="inputValue('1')">1</button>
+        <button class="button" onclick="inputValue('2')">2</button>
+        <button class="button" onclick="inputValue('3')">3</button>
+        <button class="button" onclick="calculateResult()">=</button>
+        <button class="button" onclick="inputValue('0')" style="grid-column: span 2;">0</button>
+        <button class="button" onclick="inputValue('.')">.</button>
+    </div>
+    <div class="history-panel" id="history-panel">
+        <h3>History</h3>
+        <ul id="history-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
